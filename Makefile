@@ -1,10 +1,10 @@
 CC = gcc
 OBJS = size/size.o nm/nm.o elf64.o
-
-all: size/size nm/nm
+TARGETS = size/size nm/nm
+all: $(TARGETS)
 
 clean:
-	rm -f size/size $(OBJS)
+	rm -f $(TARGETS) $(OBJS)
 
 size/size: size/size.o elf64.o
 	gcc -o size/size $^

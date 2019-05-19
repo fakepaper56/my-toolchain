@@ -12,12 +12,12 @@
 #include <sys/stat.h>
 #include <unistd.h>
 
-typedef struct{
-	void *file;
-	ssize_t size;
-	Elf64_Shdr *shdr;
-	uint16_t shdr_num;
-	const char *shdr_name;
+typedef struct {
+    void *file;
+    ssize_t size;
+    Elf64_Shdr *shdr;
+    uint16_t shdr_num;
+    const char *shdr_name;
 } elf64;
 
 elf64 *open_elf64(const char *file_name);
